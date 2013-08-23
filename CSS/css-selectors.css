@@ -1,0 +1,272 @@
+/* ==========================================================================
+   CSS Selectors
+
+   selector {
+      property: value;   
+   }
+   
+   <link rel="stylesheet" href="" media="screen/print">
+   
+   ========================================================================== */
+
+/* Basic Selectors
+   ========================================================================== */
+
+* {} /* Universal Selector */
+
+div p {} /* Descendent Selector */
+
+div > p {} /* Child Selector */
+
+div + p {} /* Adjacent Sibling Selector */
+
+div ~ p {} /* General Sibling Selector */
+
+[title] {} /* Attribute Selector */
+
+
+/* Substring Matching Attribute Selectors
+   ========================================================================== */
+
+a[href^="http://"] {} /* 'Begins with' Selector */
+
+a[href$=".ext"] {} /* 'Ends with' Selector */
+
+a[href*=""] {} /* 'Contains' Selector */
+
+a[href~=""] {} /* 'Space Separted' Selector
+
+
+/* Pseudo-classes
+   ========================================================================== */
+
+:link {}
+
+:visited {}
+
+:hover {}
+
+:active {}
+
+:focus {}
+
+
+/* Structural Pseudo-classes
+   ========================================================================== */
+
+:first-child {}
+
+:last-child {}
+
+/**
+ * :nth-child selects elements based on their positions within a parent element's list of child elements.
+ * Expression syntax = an+b
+ * The 'b' value determines the first element selected.
+ * The 'a' value determines the cycle of elements to select after the first one has been selected.
+ * Think of 'n' as a counter that starts at zero and it indicates the a value to the browser.
+ */
+
+:nth-child(even,odd,an+b) {}
+
+:nth-last-child() {}
+
+:nth-of-type(even,odd,integer) {} /* Selects an element base on its position within a parent elements list of child elements of the same type. */
+
+:nth-last-of-type() {}
+
+:first-of-type {}
+
+:last-of-type {}
+
+:only-child {}
+
+:only-of-type {}
+
+:root {} /* Selects the element that is the root of the document. Has a higher specificity than the html. */
+
+:target {}
+
+:empty {} /* Selects elements that have no child elements or content. */
+
+
+/* ui element states
+   ========================================================================== */
+
+:enabled {}
+
+:disabled {}
+
+:checked {}
+
+:not /* Negation Pseudo-class selects everything except the element specified. */
+
+/* pseudo elements
+   ========================================================================== */
+
+:first-line {}
+
+:first-letter {}
+
+:before {
+	content: " "; /* Required */
+}
+
+:after {
+	content: " "; /* Required */
+}
+	
+/* CSS3 Mulitple Backgrounds & Sizing
+   ========================================================================== */
+
+#div {
+   background-image: url(path/image.jpg),
+                     url(path/image.jpg),
+                     -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999));
+   background-size: 10px, auto, 50%;
+   background-size: contain; /* Scales an image while preserving the aspect ratio. */
+   background-size: cover; /* Scales the image to completly cover the element while perserving aspect ratios */
+   background-origin: padding-box/content-box/border-box;  /* Sets where the background starts to be rendered */
+   background-clip: ; /* determines where the background gets cutoff */
+}
+
+/* CSS3 Transitions
+   ========================================================================== */
+
+.box_transition {
+  -webkit-transition: all 0.3s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+     -moz-transition: all 0.3s ease-out;  /* Firefox 4-15 */
+       -o-transition: all 0.3s ease-out;  /* Opera 10.50–12.00 */
+          transition: all 0.3s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+/* 2d transforms
+   ========================================================================== */
+
+.box_scale {
+  -webkit-transform: scale(0.8);  /* Chrome, Safari 3.1+ */
+     -moz-transform: scale(0.8);  /* Firefox 3.5+ */
+      -ms-transform: scale(0.8);  /* IE 9 */
+       -o-transform: scale(0.8);  /* Opera 10.50-12.00 */
+          transform: scale(0.8);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_translate {
+  -webkit-transform: translate(x,y);  /* Chrome, Safari 3.1+ */
+     -moz-transform: translate(x,y);  /* Firefox 3.5+ */
+      -ms-transform: translate(x,y);  /* IE 9 */
+       -o-transform: translate(x,y);  /* Opera 10.50-12.00 */
+          transform: translate(x,y);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_rotate {
+  -webkit-transform: rotate(deg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: rotate(deg);  /* Firefox 3.5+ */
+      -ms-transform: rotate(deg);  /* IE 9 */
+       -o-transform: rotate(deg);  /* Opera 10.50-12.00 */
+          transform: rotate(deg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_skew {
+  -webkit-transform: skew(xdeg, ydeg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: skew(xdeg, ydeg);  /* Firefox 3.5+ */
+      -ms-transform: skew(xdeg, ydeg);  /* IE 9 */
+       -o-transform: skew(xdeg, ydeg);  /* Opera 10.50-12.00 */
+          transform: skew(xdeg, ydeg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_multiple {
+  -webkit-transform: skew(xdeg, ydeg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: skew(xdeg, ydeg);  /* Firefox 3.5+ */
+      -ms-transform: skew(xdeg, ydeg);  /* IE 9 */
+       -o-transform: skew(xdeg, ydeg);  /* Opera 10.50-12.00 */
+          transform: skew(xdeg, ydeg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+
+/* 3d transforms
+   ========================================================================== */
+
+.box_scale {
+  -webkit-transform: scale(0.8);  /* Chrome, Safari 3.1+ */
+     -moz-transform: scale(0.8);  /* Firefox 3.5+ */
+      -ms-transform: scale(0.8);  /* IE 9 */
+       -o-transform: scale(0.8);  /* Opera 10.50-12.00 */
+          transform: scale(0.8);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_translate {
+  -webkit-transform: translate(x,y);  /* Chrome, Safari 3.1+ */
+     -moz-transform: translate(x,y);  /* Firefox 3.5+ */
+      -ms-transform: translate(x,y);  /* IE 9 */
+       -o-transform: translate(x,y);  /* Opera 10.50-12.00 */
+          transform: translate(x,y);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_rotate {
+  -webkit-transform: rotate(deg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: rotate(deg);  /* Firefox 3.5+ */
+      -ms-transform: rotate(deg);  /* IE 9 */
+       -o-transform: rotate(deg);  /* Opera 10.50-12.00 */
+          transform: rotate(deg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_skew {
+  -webkit-transform: skew(xdeg, ydeg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: skew(xdeg, ydeg);  /* Firefox 3.5+ */
+      -ms-transform: skew(xdeg, ydeg);  /* IE 9 */
+       -o-transform: skew(xdeg, ydeg);  /* Opera 10.50-12.00 */
+          transform: skew(xdeg, ydeg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+.box_multiple {
+  -webkit-transform: skew(xdeg, ydeg);  /* Chrome, Safari 3.1+ */
+     -moz-transform: skew(xdeg, ydeg);  /* Firefox 3.5+ */
+      -ms-transform: skew(xdeg, ydeg);  /* IE 9 */
+       -o-transform: skew(xdeg, ydeg);  /* Opera 10.50-12.00 */
+          transform: skew(xdeg, ydeg);  /* Firefox 16+, IE 10+, Opera 12.50+ */
+}
+
+/* Animations
+   ========================================================================== */
+
+.box_animation:hover {
+  -webkit-animation: myanim 5s infinite; /* Chrome, Safari 5 */
+     -moz-animation: myanim 5s infinite; /* Firefox 5-15 */
+       -o-animation: myanim 5s infinite; /* Opera 12+ */
+          animation: myanim 5s infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+@-moz-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+@-o-keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+@keyframes myanim {
+  0%   { opacity: 0.0; }
+  50%  { opacity: 0.5; }
+  100% { opacity: 1.0; }
+}
+
+/* pxs to em equation
+   ========================================================================== */
+
+Target / Context = Result
+
+
+
+
+
+
+
+
+
