@@ -1,13 +1,15 @@
 /* ==========================================================================
    CSS Selectors
-
-   selector {
-      property: value;   
-   }
-   
-   <link rel="stylesheet" href="" media="screen/print">
-   
    ========================================================================== */
+
+selector {
+  property: value; 
+  <- declaration ->  
+}
+
+<link rel="stylesheet" href="" media="screen/print">
+
+
 
 /* Basic Selectors
    ========================================================================== */
@@ -25,6 +27,7 @@ div ~ p {} /* General Sibling Selector */
 [title] {} /* Attribute Selector */
 
 
+
 /* Substring Matching Attribute Selectors
    ========================================================================== */
 
@@ -35,6 +38,7 @@ a[href$=".ext"] {} /* 'Ends with' Selector */
 a[href*=""] {} /* 'Contains' Selector */
 
 a[href~=""] {} /* 'Space Separted' Selector
+
 
 
 /* Pseudo-classes
@@ -49,6 +53,7 @@ a[href~=""] {} /* 'Space Separted' Selector
 :active {}
 
 :focus {}
+
 
 
 /* Structural Pseudo-classes
@@ -89,6 +94,7 @@ a[href~=""] {} /* 'Space Separted' Selector
 :empty {} /* Selects elements that have no child elements or content. */
 
 
+
 /* ui element states
    ========================================================================== */
 
@@ -99,6 +105,8 @@ a[href~=""] {} /* 'Space Separted' Selector
 :checked {}
 
 :not /* Negation Pseudo-class selects everything except the element specified. */
+
+
 
 /* pseudo elements
    ========================================================================== */
@@ -118,6 +126,31 @@ a[href~=""] {} /* 'Space Separted' Selector
 
 
 
+/* ==========================================================================
+   https://github.com/necolas/idiomatic-css#comments
+   ========================================================================== */
+
+/* Sub-section comment block
+   ========================================================================== */
+
+/**
+ * Short description using Doxygen-style comment format
+ *
+ * The first sentence of the long description starts here and continues on this
+ * line for a while finally concluding here at the end of this paragraph.
+ *
+ * The long description is ideal for more detailed explanations and
+ * documentation. It can include example HTML, URLs, or any other information
+ * that is deemed necessary or useful.
+ *
+ * @tag This is a tag named 'tag'
+ *
+ * TODO: This is a todo statement that describes an atomic task to be completed
+ *   at a later date. It wraps after 80 characters and following lines are
+ *   indented by 2 spaces.
+ */
+
+/* Basic comment */
 
 
 
